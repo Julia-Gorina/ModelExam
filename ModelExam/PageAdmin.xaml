@@ -1,0 +1,34 @@
+﻿<Page x:Class="ModelExam.PageAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ModelExam"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAdmin">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" Margin="0,60,0,0" Background="#FF8C86BC">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Страница администратора" FontSize="30" TextAlignment="Center" FontFamily="Impact"/>
+                <DataGrid Name="dtg" Height="250" Background="#FFD1CFE0" HorizontalAlignment="Center"  ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="18" FontFamily="Impact" AutoGenerateColumns="False" Margin="88,0,102,0" Width="625">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Name}"  Foreground="#FF22203A" Width="150"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Famil}"  Foreground="#FF22203A" Width="175"/>
+                        <DataGridTextColumn Header="Телефон" Binding="{Binding Telephone}"  Foreground="#FF22203A" Width="150" />
+                        <DataGridTextColumn Header="Логин"  Binding="{Binding Login}"  Foreground="#FF22203A" Width="130"/>
+                        <DataGridTextColumn Header="Роль"  Binding="{Binding Rolei.Rol}"  Foreground="#FF22203A" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <Button Name="soxr" Template="{StaticResource soxr}" Style="{DynamicResource ResourceKey=ButtonStyle}" Width="240" Click="soxr_Click" />
+                    <Button Name="delete" Template="{StaticResource remove}" Style="{DynamicResource ResourceKey=ButtonStyle}" Width="200" Margin="10,0,0,0" Click="delete_Click"/>
+                    <Button Name="back" Template="{StaticResource back}" Style="{DynamicResource ResourceKey=ButtonStyle}" Width="100" Margin="10,0,0,0" Click="back_Click"/>
+                </StackPanel>
+                <TextBlock Name="log"  Text="{Binding SelectedItem.Name, ElementName=dtg}" Foreground="white" Visibility="Hidden"/>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

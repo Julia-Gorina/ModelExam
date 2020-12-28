@@ -1,0 +1,73 @@
+﻿<Application x:Class="ModelExam.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ModelExam"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+      
+        <Style x:Key="ButtonStyle">
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.FontWeight" Value="Bold" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+            <ControlTemplate TargetType="Button" x:Key="vxod">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7"/>
+                    </Border.Background>
+                    <ContentControl Content="Войти в кабинет" FontSize="20"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+            <ControlTemplate TargetType="Button" x:Key="zareg">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7"/>
+                    </Border.Background>
+                    <ContentControl Content="Зарегистрироваться" FontSize="20"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+            <ControlTemplate TargetType="Button" x:Key="soxr">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7"/>
+                    </Border.Background>
+                    <ContentControl Content="Сохранить изменения" FontSize="20"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+            <ControlTemplate TargetType="Button" x:Key="remove">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7"/>
+                    </Border.Background>
+                    <ContentControl Content="Удалить данные" FontSize="20"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+            <ControlTemplate TargetType="Button" x:Key="back">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7"/>
+                    </Border.Background>
+                    <ContentControl Content="Выйти" FontSize="20"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+            <ControlTemplate TargetType="Button" x:Key="registr">
+                <Border CornerRadius="12">
+                    <Border.Background>
+                        <SolidColorBrush Color="#FF673AB7" Opacity="0"/>
+                    </Border.Background>
+                    <ContentControl Content="Зарегистрироваться" FontSize="17"  HorizontalAlignment="Center"  Foreground="White" FontFamily="Impact"/>
+                </Border>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

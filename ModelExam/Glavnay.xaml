@@ -1,0 +1,41 @@
+﻿<Page x:Class="ModelExam.Glavnay"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ModelExam"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Glavnay">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" Margin="0,30,0,0">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FF7C80D8" Opacity="0.6"/>
+            </StackPanel.Background>
+            <StackPanel HorizontalAlignment="Center" Margin="0,30,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel>
+                        <Image Source="vxod.jpg" Width="300" Margin="0,30,20,0" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Войти в личный кабинет" Foreground="White" FontSize="30" Margin="0,40,0,0" FontFamily="Segoe UI Black"/>
+                        <StackPanel Orientation="Horizontal" Margin="20,30,0,0">
+                            <materialDesign:PackIcon Kind="User" Width="30" Height="40" />
+                            <TextBox Name="txtName" materialDesign:HintAssist.Hint="Введите логин" FontSize="18" Margin="10,5,0,0" Width="266" FontFamily="Segoe UI Black" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="20,30,0,0">
+                            <materialDesign:PackIcon Kind="Lock" Width="30" Height="40" />
+                            <PasswordBox Name="passwor" materialDesign:HintAssist.Hint="Введите пароль" FontSize="18" Margin="10,5,0,0" Width="266" FontFamily="Segoe UI Black" />
+                        </StackPanel>
+                        <Button Name="registr" Margin="170,10,0,0" Template="{StaticResource registr}" Style="{DynamicResource ResourceKey=ButtonStyle}" Click="registr_Click"/>
+                        <Button Name="vxod"  Margin="0,20,0,0" Template="{StaticResource vxod}" Width="210" Style="{DynamicResource ResourceKey=ButtonStyle}" Click="vxod_Click"/>
+                    </StackPanel>
+                </StackPanel>
+               
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
